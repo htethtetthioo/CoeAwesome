@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+				#thithi {
+					margin: auto;
+					width:300px;
+					text-align: center;
+				}
+		
+		
+		
+				.buttonStyle:hover { background: #FF0000;}
+			
+				 ul {
+				  list-style: none;  
+					margin: 40px 0;
+				}
+				li {
+					float : left;
+			
+					}
+				/*This will style the buttons*/
+				.buttonStyle {
+					width : 60px;
+					height : 20px;
+					   -moz-border-radius: 2px;
+					-webkit-border-radius: 2px;
+					}
+				/*This should make them change their color when they are hovered*/
+				a.buttonStyle:hover {
+					background: #FF0000;
+				}
+	</style>
+	<script>
+		var inc = 0;
+		var myVar = null;
+			
+		function testing(){
+			
+			window.myVar = setInterval(function(){
+					window.inc += 20;
+					document.getElementById("test").style.marginLeft = window.inc + "px";
+					console.log(window.inc);}
+			, 1000);
+		}
+		
+		function stoptesting(){
+			clearInterval(window.myVar);
+			window.inc = 0;
+			document.getElementById("test").style.marginLeft = window.inc + "px";
+		}	
+
+		function namechange(){
+			document.getElementById("thithi").innerHTML = "Name was changed.";
+		}
+
+	</script>
+	<title>Htet Htet Kyi Oo</title>
+	
+</head>
+<body>
+		<div id="thithi">Here is the &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;middle.</div>
+		<h2 id="test">Star</h2>
+		<p>Dancing with the star.</p>
+		<button onclick="testing()">CLiCK ME</button>
+		<button onclick="stoptesting()">Stop ME</button>
+
+		<button onclick="namechange()">ABCDEF</button>
+    <!-- custom made list to store the buttons-->
+    <ul >
+        <!-- Just some buttons to make it look like a menu-->
+        <li><input type="button" class="buttonStyle" /></li>
+        <li><input type="button" class="buttonStyle"/></li>
+        <li><input type="button" class="buttonStyle"/></li>
+        <li><input type="button" class="buttonStyle"/></li>
+        <li><input type="button" class="buttonStyle"/></li>
+	</ul>
+	<br>
+	<h2>Image Maps
+		</h2>
+		<p>Click on the wine to go to a new page and read more about the topic</p>
+		<img src="img/wine.jpg" alt="Beverage" usemap="#wine" />
+
+		<map name="wine">
+				<area shape="rect" coords="0,0,200,200" alt="Beverage" href="file:///D:/HtetHtetKyiOo/Beverage.htm">				
+		</map>
+</body>
+</html>
